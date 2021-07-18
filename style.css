@@ -17,8 +17,8 @@
 #pagefont {
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 25px;
-  letter-spacing: 30px;
-  word-spacing: 6px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
   color: #C1C1C1;
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
