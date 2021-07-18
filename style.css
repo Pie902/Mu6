@@ -7,6 +7,10 @@
   color: azure;
 }
 
+body {
+  background-color: #585858;
+}
+
 #mixer {
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
@@ -16,9 +20,9 @@
 
 #pagefont {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 25px;
-  letter-spacing: 1px;
-  word-spacing: 2px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  word-spacing: 6px;
   color: #C1C1C1;
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
@@ -26,20 +30,20 @@
   font-variant: small-caps;
   text-transform: none;
   margin-left: 50px;
-  transform: rotateX(180);
 }
 
-#audioname {
+#pagefont2 {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 20px;
-  letter-spacing: 0px;
-  word-spacing: 2px;
+  font-size: 13px;
+  letter-spacing: 3px;
+  word-spacing: 6px;
   color: #C1C1C1;
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
   font-variant: small-caps;
   text-transform: none;
+  margin-left: 50px;
 }
 
 @media screen and (orientation:portrait) {
