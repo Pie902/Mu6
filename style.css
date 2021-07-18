@@ -20,8 +20,8 @@ body {
 
 #pagefont {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 20px;
-  letter-spacing: 3px;
+  font-size: 30px;
+  letter-spacing: 6px;
   word-spacing: 6px;
   color: #C1C1C1;
   font-weight: 700;
@@ -34,8 +34,8 @@ body {
 
 #pagefont2 {
   font-family: "Comic Sans MS", cursive, sans-serif;
-  font-size: 13px;
-  letter-spacing: 3px;
+  font-size: 20px;
+  letter-spacing: 4px;
   word-spacing: 6px;
   color: #C1C1C1;
   font-weight: 700;
