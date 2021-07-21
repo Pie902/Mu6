@@ -46,6 +46,26 @@ body{background-color: rgb(37, 37, 37);}
   margin-right: 30px;
 }
 
+/* unvisited link */
+a:link {
+  color: #f0f0f0;
+}
+
+/* visited link */
+a:visited {
+  color: #f0f0f0;
+}
+
+/* mouse over link */
+a:hover {
+  color: #e0e0e0;
+}
+
+/* selected link */
+a:active {
+  color: #d0d0d0;
+}
+
 @media screen and (orientation:portrait) {
   .music {
     float: bottom;
