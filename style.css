@@ -48,22 +48,22 @@ body{background-color: rgb(37, 37, 37);}
 
 /* unvisited link */
 a:link {
-  color: #f0f0ff;
+  color: #c7ebff;
 }
 
 /* visited link */
 a:visited {
-  color: #f0f0ff;
+  color: #a6dfff;
 }
 
 /* mouse over link */
 a:hover {
-  color: #e0e0ff;
+  color: #c7ebff;
 }
 
 /* selected link */
 a:active {
-  color: #d0d0ff;
+  color: #c7ebff;
 }
 
 @media screen and (orientation:portrait) {
