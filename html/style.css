@@ -95,11 +95,11 @@ body {
 
 @media screen and (orientation:landscape) {
   .music {
-    width: 60%;
+    width: 58%;
   } 
 
   .mixer {
-    width: 35%
+    width: 34%
   }
 
 }
