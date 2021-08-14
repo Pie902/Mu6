@@ -5,15 +5,24 @@
   font-style: italic;
   font-size: large;
   color: azure;
+  width: 100%;
 }
 
 body{background-color: rgb(37, 37, 37);}
 
+#vid{
+  display: block;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #mixer {
   background-color: rgb(0, 0, 0);
   border-radius: 10px;
-  width: 100%;
   height: auto;
+  margin-left: 20px;
 }
 
 #pagefont {
@@ -66,28 +75,37 @@ a:active {
   color: #c7ebff;
 }
 
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media screen and (orientation:portrait) {
-  .music {
-    float: bottom;
+  .left {
     width: 100%;
   } 
 
-  .mixer {
-    float: top;
-    width: 100%
+  .Announcements {order: 1;}
+  .side {
+    width: 100%;
+    order: 2;
   }
-
+  .Performances {
+    width: 100%;
+    order: 3;
+  }
 }
 
 @media screen and (orientation:landscape) {
-  .music {
-    float: right;
+  .left {
     width: 60%;
   } 
 
-  .mixer {
-    float: left;
-    width: 40%
+  .side {
+    width: 35%;
   }
 
+  .Performances {
+    width: 100%;
+  }
 }
