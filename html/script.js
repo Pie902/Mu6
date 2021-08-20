@@ -28,6 +28,14 @@ var sopranoVolc = document.getElementById("audio4c");
 var tenorVolc = document.getElementById("audio5c");
 var fullVolc = document.getElementById("audio6c");
 
+var altoIco = document.getElementById("audio0ico");
+var baritoneIco = document.getElementById("audio1ico");
+var bassIco = document.getElementById("audio2ico");
+var mezzosopranoIco = document.getElementById("audio3ico");
+var sopranoIco = document.getElementById("audio4ico");
+var tenorIco = document.getElementById("audio5ico");
+var fullIco = document.getElementById("audio6ico");
+
 function Mixer() {
     if (mixerClosed == false) {
         mixerClosed = true
@@ -59,21 +67,21 @@ function Music() {
 }
 
 function mute() {
-    if(altoOn.checked == true) {altoVol.volume = altoVolc.value}
-    if(baritoneOn.checked == true) {baritoneVol.volume = baritoneVolc.value}
-    if(bassOn.checked == true) {bassVol.volume = bassVolc.value}
-    if(mezzosopranoOn.checked == true) {mezzosopranoVol.volume = mezzosopranoVolc.value}
-    if(sopranoOn.checked == true) {sopranoVol.volume = sopranoVolc.value}
-    if(tenorOn.checked == true) {tenorVol.volume = tenorVolc.value}
-    if(fullOn.checked == true) {fullVol.volume = fullVolc.value}
+    if(altoOn.checked == true) {altoVol.volume = altoVolc.value; altoIco.src = "page/vol3.png";}
+    if(baritoneOn.checked == true) {baritoneVol.volume = baritoneVolc.value; baritoneIco.src = "page/vol3.png";}
+    if(bassOn.checked == true) {bassVol.volume = bassVolc.value; bassIco.src = "page/vol3.png";}
+    if(mezzosopranoOn.checked == true) {mezzosopranoVol.volume = mezzosopranoVolc.value; mezzosopranoIco.src = "page/vol3.png";}
+    if(sopranoOn.checked == true) {sopranoVol.volume = sopranoVolc.value; sopranoIco.src = "page/vol3.png";}
+    if(tenorOn.checked == true) {tenorVol.volume = tenorVolc.value; tenorIco.src = "page/vol3.png";}
+    if(fullOn.checked == true) {fullVol.volume = fullVolc.value; fullIco.src = "page/vol3.png";}
 
-    if(altoOn.checked == false) {altoVol.volume = "0.0"}
-    if(baritoneOn.checked == false) {baritoneVol.volume = "0.0"}
-    if(bassOn.checked == false) {bassVol.volume = "0.0"}
-    if(mezzosopranoOn.checked == false) {mezzosopranoVol.volume = "0.0"}
-    if(sopranoOn.checked == false) {sopranoVol.volume = "0.0"}
-    if(tenorOn.checked == false) {tenorVol.volume = "0.0"}
-    if(fullOn.checked == false) {fullVol.volume = "0.0"}
+    if(altoOn.checked == false) {altoVol.volume = "0.0"; altoIco.src = "page/vol0.png";}
+    if(baritoneOn.checked == false) {baritoneVol.volume = "0.0"; baritoneIco.src = "page/vol0.png";}
+    if(bassOn.checked == false) {bassVol.volume = "0.0"; Ico.src = "page/vol0.png";}
+    if(mezzosopranoOn.checked == false) {mezzosopranoVol.volume = "0.0"; mezzosopranoIco.src = "page/vol0.png";}
+    if(sopranoOn.checked == false) {sopranoVol.volume = "0.0"; sopranoIco.src = "page/vol0.png";}
+    if(tenorOn.checked == false) {tenorVol.volume = "0.0"; tenorIco.src = "page/vol0.png";}
+    if(fullOn.checked == false) {fullVol.volume = "0.0"; fullIco.src = "page/vol0.png";}
 }
 
 function seek() {
@@ -112,33 +120,18 @@ function play() {
 }
 
 function main() {
+    if (altoIco.src == "page/loading.png") {altoIco.style.transform = "rotateX(90)"}
+    if (bassIco.src == "page/loading.png") {bassIco.style.transform = "rotateX(90)"}
+    if (mezzosopranoIco.src == "page/loading.png") {mezzosopranoIco.style.transform = "rotateX(90)"}
+    if (sopranoIco.src == "page/loading.png") {sopranoIco.style.transform = "rotate(90)"}
+    if (tenorIco.src == "page/loading.png") {tenorIco.style.transform = "rotate(90)"}
+    if (fullIco.src == "page/loading.png") {fullIco.className = "loader"}
+    if (baritoneIco.src == "page/loading.png") {baritoneIco.classList.add('loader')}
+
     if(busy == false) {
         document.getElementById("seek").value = document.getElementById("audio0").currentTime;
         console.log("updated");
     }
-}
-
-function ico() {
-    if (altoOn.checked == true && altoVolc != 0 && document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio0ico").src = "page/vol3.png"}
-    else if (document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio0ico").src = "page/vol0.png"}
-
-    if (baritoneOn.checked == true && baritoneVolc != 0 && document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio1ico").src = "page/vol3.png"}
-    else if (document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio1ico").src = "page/vol0.png"}
-
-    if (bassOn.checked == true && bassVolc != 0 && document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio2ico").src = "page/vol3.png"}
-    else if (document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio2ico").src = "page/vol0.png"}
-
-    if (mezzosopranoOn.checked == true && mezzoVolc != 0 && document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio3ico").src = "page/vol3.png"}
-    else if (document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio3ico").src = "page/vol0.png"}
-
-    if (sopranoOn.checked == true && sopranoVolc != 0 && document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio4ico").src = "page/vol3.png"}
-    else if (document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio4ico").src = "page/vol0.png"}
-
-    if (tenorOn.checked == true && tenorVolc != 0 && document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio5ico").src = "page/vol3.png"}
-    else if (document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio5ico").src = "page/vol0.png"}
-
-    if (fullOn.checked == true && fullVolc != 0 && document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio6ico").src = "page/vol3.png"}
-    else if (document.getElementById("audio0ico").src != "page/loading.png") {document.getElementById("audio6ico").src = "page/vol0.png"}
 }
 
 function mute0() {if (altoOn.checked == false) {altoOn.checked = true} else {altoOn.checked = false}}
@@ -169,6 +162,5 @@ function pause() {
     seek();
 }
 
-setInterval("main();", 4000);
-setInterval("mute();", 20);
-setInterval("ico();", 20);
+setInterval("main();", 4);
+setInterval("mute();", 20)
