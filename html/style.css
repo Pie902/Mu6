@@ -82,6 +82,26 @@ body {
   flex-wrap: wrap;
 }
 
+/* unvisited link */
+a:link {
+  color: #c7ebff;
+}
+
+/* visited link */
+a:visited {
+  color: #a6dfff;
+}
+
+/* mouse over link */
+a:hover {
+  color: #c7ebff;
+}
+
+/* selected link */
+a:active {
+  color: #c7ebff;
+}
+
 @media screen and (orientation:portrait) {
   .music {
     width: 100%;
