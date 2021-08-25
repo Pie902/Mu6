@@ -108,6 +108,7 @@ tenorVol.addEventListener("canplaythrough", event => {tenorCanplay = true});
 fullVol.addEventListener("canplaythrough", event => {fullCanplay = true});
 
 function main() {
+    rot += 2
     gui(altoVol, altoVolc, altoIco, altoCanplay, altoOn);
     gui(baritoneVol, baritoneVolc, baritoneIco, baritoneCanplay, baritoneOn);
     gui(bassVol, bassVolc, bassIco, bassCanplay, bassOn);
@@ -138,7 +139,6 @@ function gui(Volume, Volumec, Icon, Playable, On) {
         }
     }
     else {
-        rot += 3
         Icon.style.transform="rotate("+rot+"deg)"
     }
 }
