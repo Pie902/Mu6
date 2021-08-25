@@ -1,5 +1,18 @@
 console.log("Hey there!")
 
+var PlayImage = new Image();
+var PauseImage = new Image();
+var Vol0Image = new Image();
+var Vol1Image = new Image();
+var Vol2Image = new Image();
+var Vol3Image = new Image();
+PlayImage.src = 'page/play.png'
+PauseImage.src = 'page/pause.png'
+Vol0Image.src = 'page/vol0.png'
+Vol1Image.src = 'page/vol1.png'
+Vol2Image.src = 'page/vol2.png'
+Vol3Image.src = 'page/vol3.png'
+
 var busy = false;
 var rot = 0;
 var mixerClosed = false;
