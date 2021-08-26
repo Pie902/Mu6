@@ -67,8 +67,12 @@
   margin-left: 3px;
 }
 
-body {
-    background-color: rgb(37, 37, 37);
+
+body{
+  background: #0B1A60;
+  background: -webkit-radial-gradient(top right, #0B1A60, #313131);
+  background: -moz-radial-gradient(top right, #0B1A60, #313131);
+  background: radial-gradient(to bottom left, #0B1A60, #313131);
 }
 
 
