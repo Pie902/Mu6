@@ -47,7 +47,8 @@ body{
   border-style: solid;
   border-radius: 10px;
   height: auto;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
   background-image: url("html/page/noise.png");
@@ -125,7 +126,7 @@ a:active {
 
 @media screen and (orientation:landscape) {
   .announcements {order: 1; width: 60%;}
-  .links {order: 2; width: 32%;}
+  .links {order: 2; width: 30%;}
   .performances {order: 3; width: 60%;}
-  .people {order: 4; width: 32%;}
+  .people {order: 4; width: 30%;}
 }
