@@ -125,7 +125,7 @@ a:active {
 
 @media screen and (orientation:landscape) {
   .announcements {order: 1; width: 60%;}
-  .links {order: 2; width: 35%;}
+  .links {order: 2; width: 34%;}
   .performances {order: 3; width: 60%;}
-  .people {order: 4; width: 35%;}
+  .people {order: 4; width: 34%;}
 }
