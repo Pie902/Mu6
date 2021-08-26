@@ -1,6 +1,7 @@
 console.log("Hey there!");
 
 var open = false;
+var value = 100
 var xpos = document.getElementById("menu").style.margin-left
 
 function menu() {
@@ -16,11 +17,13 @@ function menu() {
 }
 
 function open() {
-    if (open == true && xpos < 0%) {
-        xpos += 2%;
+    if (open == false && value > 40) {
+        value -= 2
+        xpos = ""+value+"%";
     }
-    if (open == false && xpos > -20%) {
-        xpos -= 2%;
+    if (open == true && value < 100) {
+        value += 2
+        xpos = ""+value+"%";
     }
 }
 
