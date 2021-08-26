@@ -16,15 +16,15 @@ function menu() {
     console.log("Checked")
 }
 
-function open() {
-    if (open == false && value > 40) {
-        value -= 2
-        xpos = ""+value+"%";
-    }
-    if (open == true && value < 100) {
-        value += 2
-        xpos = ""+value+"%";
-    }
-}
+//function open() {
+//    if (open == false && value > 40) {
+//        value -= 2
+//        xpos = ""+value+"%";
+//    }
+//    if (open == true && value < 100) {
+//        value += 2
+//        xpos = ""+value+"%";
+//    }
+//}
 
-setInterval(open(), 5)
+//setInterval(open(), 5)
