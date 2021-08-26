@@ -1,6 +1,7 @@
 console.log("Hey there!");
 
 var open = false;
+var xpos = document.getElementById("menu").style.margin-left
 
 function menu() {
     if (open == false) {
@@ -13,3 +14,14 @@ function menu() {
     }
     console.log("Checked")
 }
+
+function open() {
+    if (open == true && xpos < 0%) {
+        xpos += 2%;
+    }
+    if (open == false && xpos > -20%) {
+        xpos -= 2%;
+    }
+}
+
+setInterval(open, 5)
