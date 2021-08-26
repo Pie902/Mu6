@@ -24,4 +24,4 @@ function open() {
     }
 }
 
-setInterval(open, 5)
+setInterval(open(), 5)
