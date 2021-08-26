@@ -179,4 +179,3 @@ function play() {
 }
 
 setInterval("main();", 4);
-setInterval("mute();", 20)
