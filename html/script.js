@@ -1,5 +1,8 @@
 console.log("Hey there!")
 
+var pos = -320;
+var menuOpen = false;
+
 var PlayImage = new Image();
 var PauseImage = new Image();
 var Vol0Image = new Image();
@@ -181,10 +184,28 @@ function play() {
 setInterval("main();", 4);
 
 function updatemenu() {
-    if (document.getElementById('responsive-menu').checked == true) {
+    if (menuOpen == true) {
+      menuOpen = false
       document.getElementById('menu').style.borderBottomRightRadius = '0';
       document.getElementById('menu').style.borderBottomLeftRadius = '0';
     }else{
+      menuOpen = true
       document.getElementById('menu').style.borderRadius = '10px';
     }
-  }
+}
+
+function animatemenu() {
+    console.log(
+        "Animating,  ",pos
+    )
+    if (menuOpen == true && pos <= 5) {
+        pos += 7;
+        document.getElementById("menu").style = "margin-top: "+pos+"px";
+      }
+    if (menuOpen == false && pos >= -320) {
+        pos -= 7;
+        document.getElementById("menu").style = "margin-top: "+pos+"px";
+      }
+}
+
+setInterval("animatemenu();", 2);

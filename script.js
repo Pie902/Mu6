@@ -1,9 +1,6 @@
 console.log("Hey there!");
 
-var open = false;
-var value = 100;
 var pos = -320;
-var ypos = document.getElementById("menu");
 var menuOpen = false;
 
 function menu() {
