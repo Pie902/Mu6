@@ -15,16 +15,6 @@ body{
   background: radial-gradient(to bottom left, #0B1A60, #313131);
 }
 
-.menuIcon {
-  position: fixed;
-  display: grid;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  margin-top: 40px;
-  margin-left: 20px;
-}
-
 #vid{
   display: block;
   width: auto;
@@ -179,4 +169,14 @@ a:active {
 #menu li a:hover {
 	color: #000000;
 	background: #e2e2e2;
+}
+
+.menuIcon {
+  position: fixed;
+  display: grid;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-top: 40px;
+  margin-left: 20px;
 }
