@@ -21,16 +21,8 @@ body{
   cursor: pointer;
   width: 50px;
   height: 50px;
-  margin-top: 30px;
-  margin-right: 3%;
-}
-
-.menu {
-  position: fixed;
-  display: none;
-  margin-left: 100%;
-  background-color: rgb(36, 36, 36);
-  height: 100%;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 
 #vid{
@@ -130,4 +122,61 @@ a:active {
   .links {order: 2; width: 30%;}
   .performances {order: 3; width: 60%;}
   .people {order: 4; width: 30%;}
+}
+
+
+#menu {
+	background: #383838;
+	color: #FFF;
+	height: auto;
+  width: 300px;
+	border-radius: 10px;
+  display: grid;
+  position: fixed;
+  margin-top: -300px;
+
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  background-image: url("html/page/noise.png");
+  background-repeat: repeat;
+
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  word-spacing: 6px;
+  color: #f0f0f0;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+}
+
+#menu ul, #menu li {
+	margin-left: 40px;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+}
+#menu li {
+	float: center;
+	display: block;
+	position: relative;
+}
+
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 5 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+
+#menu li a:hover {
+	color: #000000;
+	background: #e2e2e2;
 }
