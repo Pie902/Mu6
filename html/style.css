@@ -43,19 +43,19 @@
 }
 
 #audiobox {
-  background-color: rgb(31, 31, 31);
-  border-color: black;
-  border-width: 3px;
-  border-style: solid;
-  border-radius: 5px;
-  height: auto;
-  background-color: #272727ad;
   margin: 4px;
   border-collapse: collapse;
   width: 98%;
   height: auto;
-  background-image: url("page/noise.png");
-  background-repeat: repeat;
+
+  background: #a6deff86;
+  border-radius: 10px;
+  box-shadow: #313131;
+
+  backdrop-filter: blur(2px);
+  border: #a6deff86;
+  border-style: outset;
+  border-width: 6px;
 }
 
 #overlay {
@@ -67,30 +67,31 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(61, 61, 61, 0.808); /* Black background with opacity */
+    background-color: rgba(255, 255, 255, 0.808); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  }
+
+    background: #6893ac86;
+    border-radius: 10px;
+    box-shadow: #313131;
+
+    backdrop-filter: blur(2px);
+    border: #a6deff86;
+    border-style: outset;
+    border-width: 6px;
+}
 
 #audioname {
   font-family: "Comic Sans MS", sans-serif;
   font-size: 15px;
   letter-spacing: 3px;
   word-spacing: 6px;
-  color: #C1C1C1;
+  color: #000000;
   font-weight: 700;
   text-decoration: none solid rgb(68, 68, 68);
   font-style: normal;
   font-variant: small-caps;
   text-transform: none;
   margin-left: 3px;
-}
-
-
-body{
-  background: #0B1A60;
-  background: -webkit-radial-gradient(top right, #0B1A60, #313131);
-  background: -moz-radial-gradient(top right, #0B1A60, #313131);
-  background: radial-gradient(to bottom left, #0B1A60, #313131);
 }
 
 
@@ -103,26 +104,6 @@ body{
 .page {
   display: flex;
   flex-wrap: wrap;
-}
-
-/* unvisited link */
-a:link {
-  color: #c7ebff;
-}
-
-/* visited link */
-a:visited {
-  color: #a6dfff;
-}
-
-/* mouse over link */
-a:hover {
-  color: #c7ebff;
-}
-
-/* selected link */
-a:active {
-  color: #c7ebff;
 }
 
 @media screen and (orientation:portrait) {
@@ -152,7 +133,7 @@ a:active {
 .checkbox-label {
     display: block;
     position: relative;
-    margin: auto;
+    margin: 7px;
     cursor: pointer;
     line-height: 20px;
     height: 20px;
@@ -295,4 +276,208 @@ a:active {
   height: 50px;
   margin-top: 40px;
   margin-left: 20px;
+}
+
+
+
+
+
+/* ############################################################ */
+
+.header {
+  position: relative;
+  text-align: center;
+  font-family: cursive;
+  font-style: italic;
+  font-size: large;
+  color: azure;
+  width: 100%;
+
+  background: #a6deff86;
+  border-radius: 10px;
+  box-shadow: #313131;
+
+  backdrop-filter: blur(2px);
+  border: #a6deff86;
+  border-style: outset;
+  border-width: 6px;
+}
+
+body{
+  background-image: url("page/MusixBackdrop.png");
+}
+
+#vid{
+  display: block;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mixer {
+  background-color: rgb(44, 44, 44);
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  height: auto;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background-image: url("html/page/noise.png");
+  background-repeat: repeat;
+
+  background: #a6deff86;
+  border-radius: 10px;
+  box-shadow: #313131;
+
+  backdrop-filter: blur(2px);
+  border: #a6deff86;
+  border-style: outset;
+  border-width: 6px;
+}
+
+#block-overlay {
+  /*overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(#ffffff00, rgba(173, 173, 173, 0.274));*/
+}
+
+#pagefont {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 30px;
+  letter-spacing: 6px;
+  word-spacing: 6px;
+  color: #2e2e2e;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  margin-left: 30px;
+  margin-right: 30px;
+
+  box-shadow: rgba(0, 0, 0, 1) 0px 20px 25px -20px;
+}
+
+#pagefont2 {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  word-spacing: 6px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  margin-left: 50px;
+  margin-right: 30px;
+}
+
+a:link {color: #464646;}
+a:visited {color: #5c5c5c;}
+a:hover {color: #26343b;}
+a:active {color: #3f3f3f;}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (orientation:portrait) {
+  .announcements {order: 1; width: 100%;}
+  .links {order: 2; width: 100%;}
+  .performances {order: 3; width: 100%;}
+  .people {order: 4; width: 100%;}
+}
+
+@media screen and (orientation:landscape) {
+  .announcements {order: 1; width: 60%;}
+  .links {order: 2; width: 30%;}
+  .performances {order: 3; width: 60%;}
+  .people {order: 4; width: 30%;}
+}
+
+
+#menu {
+	background: #383838;
+	color: #FFF;
+	height: auto;
+  width: 320px;
+	border-radius: 10px;
+  display: grid;
+  position: fixed;
+  margin-top: -300px;
+
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  background-image: url("html/page/noise.png");
+  background-repeat: repeat;
+
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 20px;
+  letter-spacing: 4px;
+  word-spacing: 6px;
+  color: #f0f0f0;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+
+  background: #a6deff86;
+  border-radius: 10px;
+  box-shadow: #313131;
+
+  backdrop-filter: blur(2px);
+  border: #a6deff86;
+  border-style: outset;
+  border-width: 6px;
+}
+
+#menu ul, #menu li {
+	margin-left: 60px;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 80%;
+}
+#menu li {
+	float: center;
+	display: block;
+	position: relative;
+}
+
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 5 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+
+#menu li a:hover {
+	color: #000000;
+	background: #e2e2e2;
+}
+
+.menuIcon {
+  position: fixed;
+  display: grid;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-top: 27px;
+  margin-left: 25px;
+
+  border: #b4e4ff86;
+  border-style: groove;
+  border-width: 10px;
 }
