@@ -93,8 +93,8 @@ a:hover {color: #26343b;}
 a:active {color: #3f3f3f;}
 
 .page {
-  display: flex;
-  flex-wrap: wrap;
+  /*display: flex;
+  flex-wrap: wrap;*/
 }
 
 @media screen and (orientation:portrait) {
