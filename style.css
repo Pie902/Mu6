@@ -1,5 +1,5 @@
 .header {
-  position: relative;
+  /*position: relative;*/
   text-align: center;
   font-family: cursive;
   font-style: italic;
@@ -8,13 +8,8 @@
   width: 100%;
 
   background: #a6deff86;
-  border-radius: 10px;
   box-shadow: #313131;
-
   backdrop-filter: blur(2px);
-  border: #a6deff86;
-  border-style: outset;
-  border-width: 6px;
 }
 
 body{
