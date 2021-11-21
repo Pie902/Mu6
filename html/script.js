@@ -16,6 +16,9 @@ var Vol1Image = new Image(); Vol1Image.src = 'page/vol1.png';
 var Vol2Image = new Image(); Vol2Image.src = 'page/vol2.png';
 var Vol3Image = new Image(); Vol3Image.src = 'page/vol3.png';
 
+var MaximizeImage = new Image(); Vol3Image.src = 'page/maximize.png';
+var MinimizeImage = new Image(); Vol3Image.src = 'page/minimize.png';
+
 var busy = false;
 var rot = 0;
 var mixer = document.getElementById("mixerMain");
