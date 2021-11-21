@@ -96,16 +96,16 @@ function maximize() {
         if(window.innerHeight < window.innerWidth) {music.style = "width: 65%";}
         mixer.style = "display: block";
         document.getElementById("maximizeIcon").src="page/maximize.png";
-        document.getElementById("mixerMain2").style = "display: block";
         window.scrollTo(0, 0);
         maximized = false;
+        document.getElementById("mixerMain2").style = "display: block";
     } else {
         music.style = "width: 98%";
         mixer.style = "display: none";
         document.getElementById("maximizeIcon").src="page/minimize.png";
-        document.getElementById("mixerMain2").style = "display: none";
         window.scrollTo(0, 100);
         maximized = true;
+        document.getElementById("mixerMain2").style = "display: none";
     }
 }
 
