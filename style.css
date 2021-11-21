@@ -24,7 +24,7 @@
 
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 
-  #pagefont {
+  .pagefont {
     font-family: "Comic Sans MS", sans-serif;
     font-size: 30px;
     letter-spacing: 6px;
