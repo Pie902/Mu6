@@ -96,12 +96,14 @@ function maximize() {
         if(window.innerHeight < window.innerWidth) {music.style = "width: 65%";}
         mixer.style = "display: block";
         document.getElementById("maximizeIcon").src="page/maximize.png";
+        document.getElementsByClassName("Blurb").style = "display: block";
         window.scrollTo(0, 0);
         maximized = false;
     } else {
         music.style = "width: 98%";
         mixer.style = "display: none";
         document.getElementById("maximizeIcon").src="page/minimize.png";
+        document.getElementsByClassName("Blurb").style = "display: none";
         window.scrollTo(0, 100);
         maximized = true;
     }
