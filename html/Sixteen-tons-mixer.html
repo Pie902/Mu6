@@ -6,6 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=2">
 </head>
 
+<script>
+    function musicSelected() {
+        if(window.innerHeight < window.innerWidth) {
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Full") {document.getElementById("musicPDF").src = "music/sixteen-tons/pdf.pdf#toolbar=0&navpanes=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Alto") {document.getElementById("musicPDF").src = "music/sixteen-tons/Altopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Tenor") {document.getElementById("musicPDF").src = "music/sixteen-tons/Tenorpdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bass") {document.getElementById("musicPDF").src = "music/sixteen-tons/Basspdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bari") {document.getElementById("musicPDF").src = "music/sixteen-tons/Baripdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Soprano") {document.getElementById("musicPDF").src = "music/sixteen-tons/Sopranopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Mezzo") {document.getElementById("musicPDF").src = "music/sixteen-tons/Mezzopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+        }
+        if(window.innerHeight > window.innerWidth) {
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Full") {document.getElementById("musicPDF").src = "https://drive.google.com/file/d/1D-D9c40w1rITLFmGa3gTidZODH9vdzVz/preview";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Alto") {document.getElementById("musicPDF").src = "music/o-canada/Altopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Tenor") {document.getElementById("musicPDF").src = "music/o-canada/Tenorpdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bass") {document.getElementById("musicPDF").src = "music/o-canada/Basspdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bari") {document.getElementById("musicPDF").src = "music/o-canada/Baripdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Soprano") {document.getElementById("musicPDF").src = "music/o-canada/Sopranopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+            if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Mezzo") {document.getElementById("musicPDF").src = "music/o-canada/Mezzopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+        }
+        document.getElementById("musicpdf").onload = "";
+    }
+</script>
+
 <div class="header" id="head">
         
     <audio id="audio0" preload="auto"><source src="audio/Sixteen Tons-Alto.mp3" type="audio/mp3"></audio>
@@ -86,7 +110,7 @@
             </table>
         </div>
 
-        <object id="musicPDF" src="music/sixteen-tons/pdf.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="900px"></object>
+        <iframe id="musicPDF" src="music/sixteen-tons/pdf.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="900px"></iframe>
     </div>
 </body>
 
@@ -106,14 +130,3 @@
 </div>
 
 <script src="script.js"></script>
-<script>
-    function musicSelected() {
-        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Full") {document.getElementById("musicPDF").src = "music/sixteen-tons/pdf.pdf#toolbar=0&navpanes=0";}
-        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Alto") {document.getElementById("musicPDF").src = "music/sixteen-tons/Altopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
-        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Tenor") {document.getElementById("musicPDF").src = "music/sixteen-tons/Tenorpdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
-        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bass") {document.getElementById("musicPDF").src = "music/sixteen-tons/Basspdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
-        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bari") {document.getElementById("musicPDF").src = "music/sixteen-tons/Baripdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
-        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Soprano") {document.getElementById("musicPDF").src = "music/sixteen-tons/Sopranopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
-        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Mezzo") {document.getElementById("musicPDF").src = "music/sixteen-tons/Mezzopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
-    }
-</script>
