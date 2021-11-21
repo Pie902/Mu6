@@ -30,7 +30,7 @@
 
 @media screen and (orientation:portrait) {
   #mixerMain {width: 100%;}
-  #musicMain {width: 115%; top: 1; bottom: 0; margin-left: -5%; position: relative;}
+  #musicMain {width: 115%; top: 1; bottom: 0; margin-left: -5%; margin-right: -5%; position: absolute;}
 }
 
 @media screen and (orientation:landscape) {
