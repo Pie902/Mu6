@@ -6,14 +6,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=2">
 </head>
 
-<div class="header">
+<div class="header" id="head">
+        
+    <audio id="audio0" preload="auto"><source src="audio/O_Canada - Alto.mp3" type="audio/mp3"></audio>
+    <audio id="audio1" preload="auto"><source src="audio/O_Canada - Baritone.mp3" type="audio/mp3"></audio>
+    <audio id="audio2" preload="auto"><source src="audio/O_Canada - Bass.mp3" type="audio/mp3"></audio>
+    <audio id="audio3" preload="auto"><source src="audio/O_Canada - Mezzo-soprano.mp3" type="audio/mp3"></audio>
+    <audio id="audio4" preload="auto"><source src="audio/O_Canada - Soprano.mp3" type="audio/mp3"></audio>
+    <audio id="audio5" preload="auto"><source src="audio/O_Canada - Tenor.mp3" type="audio/mp3"></audio>
+    <audio id="audio6" preliad="auto"><source src="audio/O_Canada.mp3" type="audio/mp3"></audio>
+
     <table align="center">
         <tr>
-            <td><img src="page/Musix Logo Dark.png" width=100px; height=100px; onclick="location.href='https://pie902.github.io/Mu6/'"></td>
+            <td><img src="page/Musix Logo Dark.png" width=80px; height=80px; onclick="location.href='https://pie902.github.io/Mu6/'" style="cursor: pointer;"></td>
             <td><h1> O Canada</h1></td>
         </tr>
     </table>
 </div> 
+
+<body class="page">
+    <div id="headerOffset"></div>
+
+    <div id="mixerMain">
+        <table id="audiobox">
+            <tr id="audioboxContainer">
+                <td id="mixerIcon"><img src="page/loading.png" style="padding:3px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" width=30 height=30 id="audio6ico" onclick="toggleFull();"></td>
+                <td id="mixerName"><p id="audioname">FULL SCORE.mp3</p></td>
+                <td id="mixerVolBar"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio6c" step="0.01"/></td>
+            </tr>
+            <tr id="audioboxContainer">
+                <td id="mixerIcon"><img src="page/loading.png" style="padding:3px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" width=30 height=30 id="audio4ico" onclick="toggleSoprano();"></td>
+                <td id="mixerName"><p id="audioname">SOPRANO.mp3</p></td>
+                <td id="mixerVolBar"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio4c" step="0.01"/></td>
+            </tr>
+            <tr id="audioboxContainer">
+                <td id="mixerIcon"><img src="page/loading.png" style="padding:3px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" width=30 height=30 id="audio3ico" onclick="toggleMezzo();"></td>
+                <td id="mixerName"><p id="audioname">MEZZO-SOPRANO.mp3</p></td>
+                <td id="mixerVolBar"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio3c" step="0.01"/></td>
+            </tr>
+            <tr id="audioboxContainer">
+                <td id="mixerIcon"><img src="page/loading.png" style="padding:3px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" width=30 height=30 id="audio0ico" onclick="toggleAlto();"></td>
+                <td id="mixerName"><p id="audioname">ALTO.mp3</p></td>
+                <td id="mixerVolBar"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio0c" step="0.01"/></td>
+            </tr>
+            <tr id="audioboxContainer">
+                <td id="mixerIcon"><img src="page/loading.png" style="padding:3px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" width=30 height=30 id="audio5ico" onclick="toggleTenor();"></td>
+                <td id="mixerName"><p id="audioname">TENOR.mp3</p></td>
+                <td id="mixerVolBar"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio5c" step="0.01"/></td>
+            </tr>
+            <tr id="audioboxContainer">
+                <td id="mixerIcon"><img src="page/loading.png" style="padding:3px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" width=30 height=30 id="audio1ico" onclick="toggleBari();"></td>
+                <td id="mixerName"><p id="audioname">BARITONE.mp3</p></td>
+                <td id="mixerVolBar"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio1c" step="0.01"/></td>
+            </tr>
+            <tr id="audioboxContainer">
+                <td id="mixerIcon"><img src="page/loading.png" style="padding:3px; cursor: pointer; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;" width=30 height=30 id="audio2ico" onclick="toggleBass();"></td>
+                <td id="mixerName"><p id="audioname">BASS.mp3</p></td>
+                <td id="mixerVolBar"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio2c" step="0.01"/></td>
+            </tr>
+        </table>
+    </div>
+    <div style="width: 100%;"></div>
+    <div id="mixerMain">
+        <p id="audioname">Latin translated with Google<br>
+            Old English translated by <a href="https://funtranslations.com/oldenglish">https://funtranslations.com/oldenglish</a>    <a href="https://oldenglish.info/advpronunciationguide.html">(Pronounciation Guide→)</a><br>
+            French from <a href="https://www.canada.ca/en/canadian-heritage/services/anthems-canada.html">National Website</a>    <a href="https://tinyurl.com/yb58deod">(Audio→)</a><br>
+            Blackfoot by Tsuaki Marule (correct traditional spelling is not used!) <a href="https://youtu.be/nCbOgHpu438?t=35">https://youtu.be/nCbOgHpu438</a><br>
+            English from traditional Anthem<br><br>
+            No copyright infringements intended!
+        </p>
+
+        <p id="audioname" style="align=center"><br>LYRICS
+            <br><br>O Canada, domi tera nostra patriae<br>
+            Verum amorem patriae<br>
+            filiis tuo imperio<br>
+            With glôwende hearts<br>
+            Attraction with pron feyk<br>
+            Lôcian strenglic faya wah fay (tôniman)<br>
+            Ton Histoire est une<br>
+            épopéea, Des plus brillants exploits!<br>
+            Eehsta peh ta pooh<br>
+            Eehsta tseet<br>
+            O Canada dow wahk ah<br>
+            tseepee nah<br>
+            O Canada we stand on guard for thee!<br>
+        </p>
+    </div>
+
+    <div align=center id="musicMain">
+        <div id="musicMenu">
+            <table>
+                <td style="width: 4%;"></td>
+                <td id="mixerName">
+                    <select id="musicSelected" class="musicSelected" onchange="musicSelected();">
+                        <option value="Full">Full Score</option>
+                        <option value="Soprano">Soprano</option>
+                        <option value="Mezzo">Mezzo-Soprano</option>
+                        <option value="Alto">Alto</option>
+                        <option value="Tenor">Tenor</option>
+                        <option value="Bari">Baritone</option>
+                        <option value="Bass">Bass</option>
+                    </select>
+                </td>
+                <td style="width: 4%;"><img src="page/maximize.png" onclick="maximize();" style="cursor:pointer;" class="centered" id="maximizeIcon" width="40px" height="40px"></td>
+            </table>
+        </div>
+
+        <embed id="musicPDF" src="music/o-canada/pdf.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="900px"/>
+    </div>
+</body>
 
 <nav id='menu'><div id="block-overlay">
     <ul id='submenus'>
@@ -24,137 +125,45 @@
 
 <img class="menuIcon" src="page/menu.png" onclick="updatemenu();">
 
-<body class="page">
-    <div id="mixer"><div id="block-overlay">
-        <p id="audioname">Latin translated with Google<br>
-            Old English translated by <a href="https://funtranslations.com/oldenglish">https://funtranslations.com/oldenglish</a>    <a href="https://oldenglish.info/advpronunciationguide.html">(Pronounciation Guide→)</a><br>
-            French from <a href="https://www.canada.ca/en/canadian-heritage/services/anthems-canada.html">Canada's Website</a>    <a href="https://tinyurl.com/yb58deod">(Audio→)</a><br>
-            Blackfoot by Tsuaki Marule (correct traditional spelling is not used!) <a href="https://youtu.be/nCbOgHpu438?t=35">https://youtu.be/nCbOgHpu438</a><br>
-            
-            English from traditional Anthem<br><br>
-            
-            No copyright infringements intended!</p>
-    </div></div>
 
-    <div id="mixer"><div id="block-overlay">
-        <p id="audioname" style="align=center">LYRICS
-<br><br>O Canada, domi tera nostra patriae<br>
-Verum amorem patriae<br>
-filiis tuo imperio<br>
-With glôwende hearts<br>
-Attraction with pron feyk<br>
-Lôcian strenglic faya wah fay (tôniman)<br>
-Ton Histoire est une<br>
-épopéea, Des plus brillants exploits!<br>
-Eehsta peh ta pooh<br>
-Eehsta tseet<br>
-O Canada dow wahk ah<br>
-tseepee nah<br>
-O Canada we stand on guard for thee!<br>
-        </p>
-    </div></div>
-
-    <div id="mixer" class="mixer"><div id="block-overlay">
-        <table align="center" style="width: 100%; cursor: pointer;" border="0px">
-            <tr onclick="Mixer()">
-                <td style="width: 40%;" align=right><img id="mixerMainico" src="page/open.png" width=40px; height=20px;></td>
-                <td style="width: 60%;" align=left><h1 id="pagefont">MIXER</h1></td>
-            </tr>
-        </table>
-
-        <audio id="audio0" preload="auto"><source src="audio/O_Canada - Alto.mp3" type="audio/mp3"></audio>
-        <audio id="audio1" preload="auto"><source src="audio/O_Canada - Baritone.mp3" type="audio/mp3"></audio>
-        <audio id="audio2" preload="auto"><source src="audio/O_Canada - Bass.mp3" type="audio/mp3"></audio>
-        <audio id="audio3" preload="auto"><source src="audio/O_Canada - Mezzo-soprano.mp3" type="audio/mp3"></audio>
-        <audio id="audio4" preload="auto"><source src="audio/O_Canada - Soprano.mp3" type="audio/mp3"></audio>
-        <audio id="audio5" preload="auto"><source src="audio/O_Canada - Tenor.mp3" type="audio/mp3"></audio>
-        <audio id="audio6" preliad="auto"><source src="audio/O_Canada.mp3" type="audio/mp3"></audio>
-
-        <div style="height: auto; transform: scaleY(1);" id="mixerMain">
-            <table id="audiobox"><tr>
-                <td style="width: 6%;"><label class="checkbox-label"><input type="checkbox" id="checkbox6"/><span class="checkbox-custom rectangular"></span></label></td>
-                <td style="width: 44%;"><p id="audioname">FULL SCORE.mp3</p></td>
-                <td style="width: 5%;"><img src="page/loading.png" width=30 height=30 id="audio6ico"></td>
-                <td style="width: 45%;"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio6c" step="0.01"/></td>
-            </tr></table>
-
-            <table id="audiobox"><tr>
-                <td style="width: 6%;"><label class="checkbox-label"><input type="checkbox" id="checkbox4"/><span class="checkbox-custom rectangular"></span></label></td>
-                <td style="width: 44%;"><p id="audioname">SOPRANO.mp3</p></td>
-                <td style="width: 5%;"><img src="page/loading.png" width=30 height=30 id="audio4ico"></td>
-                <td style="width: 45%;"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio4c" step="0.01"/></td>
-            </tr></table>
-
-            <table id="audiobox"><tr>
-                <td style="width: 6%;"><label class="checkbox-label"><input type="checkbox" id="checkbox3"/><span class="checkbox-custom rectangular"></span></label></td>
-                <td style="width: 44%;"><p id="audioname">MEZZO-SOPRANO.mp3</p></td>
-                <td style="width: 5%;"><img src="page/loading.png" width=30 height=30 id="audio3ico"></td>
-                <td style="width: 45%;"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio3c" step="0.01"/></td>
-            </tr></table>
-
-            <table id="audiobox"><tr>
-                <td style="width: 6%;"><label class="checkbox-label"><input type="checkbox" id="checkbox0"/><span class="checkbox-custom rectangular"></span></label></td>
-                <td style="width: 44%;"><p id="audioname">ALTO.mp3</p></td>
-                <td style="width: 5%;"><img src="page/loading.png" width=30 height=30 id="audio0ico"></td>
-                <td style="width: 45%;"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio0c" step="0.01"/></td>
-            </tr></table>
-
-            <table id="audiobox"><tr>
-                <td style="width: 6%;"><label class="checkbox-label"><input type="checkbox" id="checkbox5"/><span class="checkbox-custom rectangular"></span></label></td>
-                <td style="width: 44%;"><p id="audioname">TENOR.mp3</p></td>
-                <td style="width: 5%;"><img src="page/loading.png" width=30 height=30 id="audio5ico"></td>
-                <td style="width: 45%;"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio5c" step="0.01"/></td>
-            </tr></table>
-            
-            <table id="audiobox"><tr>
-                <td style="width: 6%;"><label class="checkbox-label"><input type="checkbox" id="checkbox1"/><span class="checkbox-custom rectangular"></span></label></td>
-                <td style="width: 44%;"><p id="audioname">BARITONE.mp3</p></td>
-                <td style="width: 5%;"><img src="page/loading.png" width=30 height=30 id="audio1ico"></td>
-                <td style="width: 45%;"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio1c" step="0.01"/></td>
-            </tr></table>
-
-            <table id="audiobox"><tr>
-                <td style="width: 6%;"><label class="checkbox-label"><input type="checkbox" id="checkbox2"/><span class="checkbox-custom rectangular"></span></label></td>
-                <td style="width: 44%;"><p id="audioname">BASS.mp3</p></td>
-                <td style="width: 5%;"><img src="page/loading.png" width=30 height=30 id="audio2ico"></td>
-                <td style="width: 45%;"><input style="width: 100%;" type="range" min="0.0" max="1.0" id="audio2c" step="0.01"/></td>
-            </tr></table>
-
-            <div style="height: 2px;"></div>
-        </div>
-    </div></div>
-<br>
-    <div id="mixer" class="music">
-        <table align="center" style="width: 100%; cursor: pointer;" border="0px">
-            <tr onclick="Music()">
-                <td style="width: 40%;" align=right><img id="musicMainico" src="page/open.png" width=40px; height=20px;></td>
-                <td style="width: 60%;" align=left><h1 id="pagefont">MUSIC</h1></td>
-            </tr>
-        </table>
- 
-        <div align=center id="musicMain">   
-            <iframe src="https://drive.google.com/file/d/1Bt-ja5sQJbUPYFsQMn4MYSY_1CrfiF9L/preview" width="98%" height="500px"></iframe>
-        </div>
-
-    </div>
-
-    <div style="height: 15%;"></div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</body>
-
-
-<div id="overlay">
-    <table align="center">
-        <tr>
-            <input id="seek" type="range" min="0" max="282.435813" step="0.5" value="0" onchange="seek();">
-            <td><img id="button" src="page/play.png" width=60px height=60px style="cursor: pointer; margin-top: 5px;" onclick="toggle();"></td>
-        </tr>
-    </table>
+<div id="controller">
+    <input style="position: fixed; margin-top: -10px; width: 99%;" id="seek" type="range" min="0" max="282.435813" step="0.5" value="0" onchange="seek();">
+    <img class="centered" id="playButton" src="page/play.png" width="50px" height="50px" style="cursor:pointer" onclick="toggle();">
 </div>
 
 <script src="script.js"></script>
+<script>
+    function musicSelected() {
+        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Full") {document.getElementById("musicPDF").src = "music/o-canada/pdf.pdf#toolbar=0&navpanes=0";}
+        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Alto") {document.getElementById("musicPDF").src = "music/o-canada/Altopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Tenor") {document.getElementById("musicPDF").src = "music/o-canada/Tenorpdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bass") {document.getElementById("musicPDF").src = "music/o-canada/Basspdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Bari") {document.getElementById("musicPDF").src = "music/o-canada/Baripdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Soprano") {document.getElementById("musicPDF").src = "music/o-canada/Sopranopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+        if(document.getElementById('musicSelected').options[document.getElementById('musicSelected').selectedIndex].value == "Mezzo") {document.getElementById("musicPDF").src = "music/o-canada/Mezzopdf.pdf#toolbar=0&navpanes=0&scrollbar=0";}
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

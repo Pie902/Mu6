@@ -1,34 +1,38 @@
 console.log("Hey there!")
 
-var pos = -320;
+// To add new music: 
+//  Copy a page,
+//  Change Title
+//  Change pdf references
+//  Change audio references
+
+var menupos = -320;
 var menuOpen = false;
 
-var PlayImage = new Image();
-var PauseImage = new Image();
-var Vol0Image = new Image();
-var Vol1Image = new Image();
-var Vol2Image = new Image();
-var Vol3Image = new Image();
-PlayImage.src = 'page/play.png';
-PauseImage.src = 'page/pause.png';
-Vol0Image.src = 'page/vol0.png';
-Vol1Image.src = 'page/vol1.png';
-Vol2Image.src = 'page/vol2.png';
-Vol3Image.src = 'page/vol3.png';
+var PlayImage = new Image(); PlayImage.src = 'page/play.png';
+var PauseImage = new Image(); PauseImage.src = 'page/pause.png';
+var Vol0Image = new Image(); Vol0Image.src = 'page/vol0.png';
+var Vol1Image = new Image(); Vol1Image.src = 'page/vol1.png';
+var Vol2Image = new Image(); Vol2Image.src = 'page/vol2.png';
+var Vol3Image = new Image(); Vol3Image.src = 'page/vol3.png';
 
 var busy = false;
 var rot = 0;
-var mixerClosed = false;
-var musicClosed = false;
+var mixer = document.getElementById("mixerMain");
+var music = document.getElementById("musicMain");
+var head = document.getElementById("head");
+var maximized = false;
 
-var altoOn = document.getElementById("checkbox0");
-var baritoneOn = document.getElementById("checkbox1");
-var bassOn = document.getElementById("checkbox2");
-var mezzosopranoOn = document.getElementById("checkbox3");
-var sopranoOn = document.getElementById("checkbox4");
-var tenorOn = document.getElementById("checkbox5");
-var fullOn = document.getElementById("checkbox6");
+// Toggle on/off Volume
+var altoOn = false;
+var baritoneOn = false;
+var bassOn = false;
+var mezzosopranoOn = false;
+var sopranoOn = false;
+var tenorOn = false;
+var fullOn = true;
 
+// Audio
 var altoVol = document.getElementById("audio0");
 var baritoneVol = document.getElementById("audio1");
 var bassVol = document.getElementById("audio2");
@@ -45,6 +49,7 @@ var sopranoCanplay = false
 var tenorCanplay = false
 var fullCanplay = false
 
+// Volume Control Bars
 var altoVolc = document.getElementById("audio0c");
 var baritoneVolc = document.getElementById("audio1c");
 var bassVolc = document.getElementById("audio2c");
@@ -53,6 +58,7 @@ var sopranoVolc = document.getElementById("audio4c");
 var tenorVolc = document.getElementById("audio5c");
 var fullVolc = document.getElementById("audio6c");
 
+// Volume Icons
 var altoIco = document.getElementById("audio0ico");
 var baritoneIco = document.getElementById("audio1ico");
 var bassIco = document.getElementById("audio2ico");
@@ -61,35 +67,13 @@ var sopranoIco = document.getElementById("audio4ico");
 var tenorIco = document.getElementById("audio5ico");
 var fullIco = document.getElementById("audio6ico");
 
-function Mixer() {
-    if (mixerClosed == false) {
-        mixerClosed = true
-        document.getElementById("mixerMain").style.transform = "scaleY(0)";
-        document.getElementById("mixerMain").style.height = "0";
-        document.getElementById("mixerMainico").style.transform = "scaleY(-1)";
-    }
-    else {
-        mixerClosed = false
-        document.getElementById("mixerMain").style.transform = "scaleY(1)";
-        document.getElementById("mixerMain").style.height = "auto";
-        document.getElementById("mixerMainico").style.transform = "scaleY(1)";
-    }
-}
-
-function Music() {
-    if (musicClosed == false) {
-        musicClosed = true
-        document.getElementById("musicMain").style.transform = "scaleY(0)";
-        document.getElementById("musicMain").style.height = "0";
-        document.getElementById("musicMainico").style.transform = "scaleY(-1)";        
-    }
-    else {
-        musicClosed = false
-        document.getElementById("musicMain").style.transform = "scaleY(1)";
-        document.getElementById("musicMain").style.height = "auto";
-        document.getElementById("musicMainico").style.transform = "scaleY(1)";
-    }
-}
+function toggleAlto() {altoOn = !altoOn}
+function toggleBari() {baritoneOn = !baritoneOn}
+function toggleBass() {bassOn = !bassOn}
+function toggleMezzo() {mezzosopranoOn = !mezzosopranoOn}
+function toggleSoprano() {sopranoOn = !sopranoOn}
+function toggleTenor() {tenorOn = !tenorOn}
+function toggleFull() {fullOn = !fullOn}
 
 function seek() {
     busy = true
@@ -104,14 +88,28 @@ function seek() {
     busy = false
 }
 
+function maximize() {
+    if(maximized == true) {
+        if(window.innerHeight < window.innerWidth) {music.style = "width: 65%";}
+        mixer.style = "display: block";
+        document.getElementById("maximizeIcon").src="page/maximize.png";
+        window.scrollTo(0, 0);
+        maximized = false;
+    } else {
+        music.style = "width: 98%";
+        mixer.style = "display: none";
+        document.getElementById("maximizeIcon").src="page/minimize.png";
+        window.scrollTo(0, 100);
+        maximized = true;
+    }
+}
+
 function toggle() {
     if (document.getElementById("audio0").paused) {
         play();
-        document.getElementById("button").src="page/pause.png";
     }
     else {
         pause();
-        document.getElementById("button").src="page/play.png"
     }
 }
 
@@ -132,17 +130,18 @@ function main() {
     gui(sopranoVol, sopranoVolc, sopranoIco, sopranoCanplay, sopranoOn);
     gui(tenorVol, tenorVolc, tenorIco, tenorCanplay, tenorOn);
     gui(fullVol, fullVolc, fullIco, fullCanplay, fullOn);
-
-    if(busy == false) {
+}
+function updateSeek() {
+    if(busy == false && !document.getElementById("audio0").paused) {
         document.getElementById("seek").value = document.getElementById("audio0").currentTime;
-        console.log("updated");
     }
 }
 
+// Display Correct Icon
 function gui(Volume, Volumec, Icon, Playable, On) {
     if (Playable == true) {
         Icon.style.transform="rotate(0deg)"
-        if (On.checked == true) {
+        if (On == true) {
             if (Volumec.value >= 0.0) {Icon.src = "page/vol0.png"}
             if (Volumec.value >= 0.05) {Icon.src = "page/vol1.png"}
             if (Volumec.value >= 0.3) {Icon.src = "page/vol2.png"}
@@ -159,7 +158,9 @@ function gui(Volume, Volumec, Icon, Playable, On) {
     }
 }
 
+//Pause All
 function pause() {
+    document.getElementById("playButton").src = "page/play.png";
     document.getElementById('audio0').pause();
     document.getElementById('audio1').pause();
     document.getElementById('audio2').pause();
@@ -169,8 +170,9 @@ function pause() {
     document.getElementById('audio6').pause();
     seek();
 }
-
+//Play All
 function play() {
+    document.getElementById("playButton").src = "page/pause.png";    
     document.getElementById('audio0').play();
     document.getElementById('audio1').play();
     document.getElementById('audio2').play();
@@ -180,8 +182,6 @@ function play() {
     document.getElementById('audio6').play();
     seek();
 }
-
-setInterval("main();", 4);
 
 function updatemenu() {
     if (menuOpen == true) {
@@ -195,17 +195,16 @@ function updatemenu() {
 }
 
 function animatemenu() {
-    console.log(
-        "Animating,  ",pos
-    )
-    if (menuOpen == true && pos <= 5) {
-        pos += 7;
-        document.getElementById("menu").style = "margin-top: "+pos+"px";
+    if (menuOpen == true && menupos <= 5) {
+        menupos += 7;
+        document.getElementById("menu").style = "margin-top: "+menupos+"px";
       }
-    if (menuOpen == false && pos >= -320) {
-        pos -= 7;
-        document.getElementById("menu").style = "margin-top: "+pos+"px";
+    if (menuOpen == false && menupos >= -320) {
+        menupos -= 7;
+        document.getElementById("menu").style = "margin-top: "+menupos+"px";
       }
 }
 
+setInterval("main();", 4);
+setInterval("updateSeek();", 200);
 setInterval("animatemenu();", 2);

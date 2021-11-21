@@ -1,32 +1,200 @@
+.page {
+  background-color: rgb(36, 36, 36);
+  background-image: url("page/MusixBackdrop2.png");
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .header {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 95px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 1;
+
+  margin: 0;
+  box-shadow: rgba(163, 163, 163, 0.4) 0px 2px 4px, rgba(136, 136, 136, 0.575) 0px 7px 13px -3px, rgba(36, 36, 36, 0.2) 0px -3px 0px inset;
+
+  backdrop-filter: blur(2px);
+  background-color: rgba(69, 72, 78, 0.719);
+  border-bottom: 4px solid rgb(27, 25, 32);
+
   text-align: center;
-  font-family: cursive;
   font-style: italic;
   font-size: large;
-  color: azure;
-  width: 100%;
+  color: aliceblue;
+}#headerOffset{height: 95px; width: 100%;}
+
+@media screen and (orientation:portrait) {
+  #mixerMain {width: 100%;}
+  #musicMain {width: 100%; top: 1; bottom: 0; margin: 0px; position: relative;}
 }
 
-#mixer {
-  background-color: rgb(44, 44, 44);
-  border-color: black;
-  border-width: 3px;
+@media screen and (orientation:landscape) {
+  #mixerMain {width: 30%;}
+  #musicMain {width: 65%; right: 0; margin-top: 95px; margin-right: 5px; position: absolute;}
+}
+
+#mixerMain {
+  box-shadow: rgba(163, 163, 163, 0.4) 0px 2px 4px, rgba(136, 136, 136, 0.575) 0px 7px 13px -3px, rgba(36, 36, 36, 0.2) 0px -3px 0px inset;
+  backdrop-filter: blur(2px);
+  margin: 5px;
+  border: #1b1b1b86;
   border-style: solid;
-  border-radius: 10px;
-  height: auto;
-  margin: 1%;
-  background-image: url("page/noise.png");
-  background-repeat: repeat;
+  border-width: 6px;
+  height: fit-content;
 }
 
-#block-overlay {
-  overflow: hidden;
+#audiobox {width: 100%; background-color: rgba(83, 83, 83, 0.295);}
+#audioboxContainer {box-shadow:rgba(0, 0, 0, 0.35) 0px -2px 6px 0px inset;}
+#mixerIcon {width: 10%;}
+#mixerName {width: 35%;}
+#mixerVolBar {width: 55%;}
+
+#audioname {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0px;
+  word-spacing: 6px;
+  color: #bde6de;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  margin-left: 3px;
+}
+
+#musicMain {
+  box-shadow: rgba(163, 163, 163, 0.4) 0px 2px 4px, rgba(136, 136, 136, 0.575) 0px 7px 13px -3px, rgba(36, 36, 36, 0.2) 0px -3px 0px inset;
+  backdrop-filter: blur(2px);
+  border: #1b1b1b86;
+  border-style: solid;
+  border-width: 6px;
+}
+
+#musicMenu {height: 55px;}
+.centered {display: block; margin-left: auto; margin-right: auto;}
+
+.musicSelected {
+  backdrop-filter: blur(2px);
+  background-color: rgba(69, 72, 78, 0.719);
+  border:3px, solid, rgb(40, 56, 128);
+  border-radius: 5px; 
+
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+
+  cursor: pointer;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.musicSelected option {
+  backdrop-filter: blur(3px);
+  background-color:rgb(53, 53, 53);
+  border:3px, solid, rgb(54, 65, 117);
+  border-radius: 5px; 
+
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+
+  cursor: pointer;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+.musicSelected option:checked {background-color: rgb(63, 63, 63);}
+.musicSelected:hover {background-color: rgb(69, 72, 78);}
+
+#controller {
+  position: fixed;
+  display: block;
+  top: 1; bottom: 0; right: 0; left: 0;
+  width: 100%; height: 60px;
+  align-content: center;
+
+  backdrop-filter: blur(5px);
+  background-color: rgba(69, 72, 78, 0.719);
+
+  border-top: 4px solid rgb(27, 25, 32);
+}body { padding-bottom: 60px; }
+
+a:link {color: #b6b6b6;}
+a:visited {color: #c4c4c4;}
+a:hover {color: #667881;}
+a:active {color: #3d3d3d;}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+#menu {
+	height: auto;
+  width: 300px;
+	border-radius: 5px;
+  display: grid;
+  position: fixed;
+  margin-top: -300px;
+
+  box-shadow: rgba(163, 163, 163, 0.4) 0px 2px 4px, rgba(136, 136, 136, 0.575) 0px 7px 13px -3px, rgba(36, 36, 36, 0.2) 0px -3px 0px inset;
+  backdrop-filter: blur(2px);
+  background-color: rgba(69, 72, 78, 0.719);
+  border: 4px solid rgb(27, 25, 32);
+
+  /*font-family: "Comic Sans MS", sans-serif;
+  font-size: 15px;
+  letter-spacing: 4px;
+  word-spacing: 6px;
+  color: #f0f0f0;
+  font-weight: 700;
+  text-decoration: none solid rgb(68, 68, 68);
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;*/
+}
+
+#menu ul, #menu li {margin-left: 40px; padding: 0; list-style: none}
+#menu ul {width: 80%;}
+#menu li {float: center; display: block; position: relative;}
+
+#menu a {
+	display: block;
+	line-height: 45px;
+	padding: 5 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+
+#menu li a:hover {
+	color: #ffffff;
+	background: rgb(87, 91, 99);
+}
+
+.menuIcon {
+  position: absolute;
+  display: grid;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+
+
+
+#block-overlay {}
+  /*overflow: hidden;
   height: 100%;
   border-radius: 10px;
   background: linear-gradient(#ffffff00, rgba(173, 173, 173, 0.274));
 }
-
+/*
 #pagefont {
   font-family: "Comic Sans MS", sans-serif;
   font-size: 25px;
@@ -59,16 +227,16 @@
 }
 
 #overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: block; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 15%; /* Full height (cover the whole page) */
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 15%;
     top: 1;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.808); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    background-color: rgba(255, 255, 255, 0.808);
+    z-index: 2;
 
     background: #6893ac86;
     border-radius: 10px;
@@ -100,36 +268,6 @@
     height: 10px;
 }
 
-
-.page {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-@media screen and (orientation:portrait) {
-  .music {
-    width: 100%;
-  } 
-
-  .mixer {
-    width: 100%
-  }
-
-}
-
-@media screen and (orientation:landscape) {
-  .music {
-    width: 58%;
-  } 
-
-  .mixer {
-    width: 34%
-  }
-
-}
-
-
-/* Styling Checkbox Starts */
 .checkbox-label {
     display: block;
     position: relative;
@@ -278,12 +416,6 @@
   margin-left: 20px;
 }
 
-
-
-
-
-/* ############################################################ */
-
 .header {
   position: relative;
   text-align: center;
@@ -340,10 +472,10 @@ body{
 }
 
 #block-overlay {
-  /*overflow: hidden;
+  overflow: hidden;
   height: 100%;
   border-radius: 10px;
-  background: linear-gradient(#ffffff00, rgba(173, 173, 173, 0.274));*/
+  background: linear-gradient(#ffffff00, rgba(173, 173, 173, 0.274));
 }
 
 #pagefont {
@@ -480,4 +612,4 @@ a:active {color: #3f3f3f;}
   border: #b4e4ff86;
   border-style: groove;
   border-width: 10px;
-}
+}*/
