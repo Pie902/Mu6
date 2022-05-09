@@ -47,7 +47,7 @@ function animatemenu() {
         pos += 7;
         document.getElementById("menu").style = "margin-top: "+pos+"px";
       }
-    if (menuOpen == false && pos >= -320) {
+    if (menuOpen == false && pos >= -350) {
         pos -= 7;
         document.getElementById("menu").style = "margin-top: "+pos+"px";
       }
