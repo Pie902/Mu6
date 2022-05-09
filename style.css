@@ -124,7 +124,7 @@
 	border-radius: 5px;
   display: grid;
   position: fixed;
-  margin-top: -300px;
+  margin-top: -330px;
 
   box-shadow: rgba(163, 163, 163, 0.4) 0px 2px 4px, rgba(136, 136, 136, 0.575) 0px 7px 13px -3px, rgba(36, 36, 36, 0.2) 0px -3px 0px inset;
   backdrop-filter: blur(2px);
