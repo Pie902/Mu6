@@ -1,6 +1,6 @@
 console.log("Hey there!");
 
-var pos = -320;
+var pos = -400;
 var menuOpen = false;
 
 function menu() {
@@ -25,7 +25,6 @@ function menu() {
 //        xpos = ""+value+"%";
 //    }
 //}
-
 //setInterval(open(), 5)
 
 function updatemenu() {
@@ -47,7 +46,7 @@ function animatemenu() {
         pos += 7;
         document.getElementById("menu").style = "margin-top: "+pos+"px";
       }
-    if (menuOpen == false && pos >= -420) {
+    if (menuOpen == false && pos >= -450) {
         pos -= 7;
         document.getElementById("menu").style = "margin-top: "+pos+"px";
       }
